@@ -1,21 +1,52 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 span.chip {
-    padding: .2em .4em;
+    border: 1px solid #55555533;
+    background-color: #E8EBEE;
+    padding: 0.2em 0.4em;
     margin: 0.25rem;
     font-size: 85%;
     white-space: break-spaces;
-    background-color: #818b981f;
     border-radius: 6px;
     display: inline-block;
 }
 
-.button,button {
+.button,
+button {
     box-shadow: 0px 10px 25px 0px hsl(from var(--button-background) h s l / 0.5);
-    min-height:4.5rem;
-    margin-bottom:2rem;
-	margin-left:1rem;
-	margin-right:1rem;
+    min-height: 4.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .container {
-    max-width:initial;
+    max-width: initial;
+}
+
+body {
+    --s: 500px; /* control the size*/
+    --c1: #ffffff;
+    --c2: #f8f8f8;
+
+    --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%, var(--c1) 36% 45%, var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%, var(--c1) 76% 85%, var(--c2) 86% 95%, #0000 96%;
+    background: radial-gradient(50% 50% at 100% 0, var(--_g)), radial-gradient(50% 50% at 0 100%, var(--_g)), radial-gradient(50% 50%, var(--_g)), radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2) var(--c1);
+    background-size: var(--s) var(--s);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root.theme-auto body {
+        --c1: #121212;
+        --c2: #181818;
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    :root.theme-auto span.chip {
+        background-color: #252C34;
+    }
 }
