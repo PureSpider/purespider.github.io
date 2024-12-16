@@ -42,8 +42,6 @@ body {
     :root.theme-auto body {
         --c1: #121212;
         --c2: #181818;
-        background-color: #121212;
-        color: #ffffff;
     }
 
     :root.theme-auto span.chip {
